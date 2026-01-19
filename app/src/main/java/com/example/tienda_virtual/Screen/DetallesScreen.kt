@@ -66,22 +66,22 @@ fun DetallesScreen(
                 fontSize = 18.sp,
             )
 
-            Spacer(modifier = Modifier.height(24.dp))
-
-            Button(
-                onClick = onHomeClick,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                Text("Ir al Home")
-            }
-
             Spacer(modifier = Modifier.height(12.dp))
 
             Button(
                 onClick = onHistoriaClick,
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Ir a Historia")
+                Text("Comprar ahora")
+            }
+
+            Spacer(modifier = Modifier.height(24.dp))
+
+            Button(
+                onClick = onHomeClick,
+                modifier = Modifier.fillMaxWidth()
+            ) {
+                Text("Ir al menu")
             }
         }
     }

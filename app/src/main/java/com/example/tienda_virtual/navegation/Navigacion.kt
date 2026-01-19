@@ -10,6 +10,7 @@ import androidx.navigation.navArgument
 import com.example.tienda_virtual.Screen.DetallesScreen
 import com.example.tienda_virtual.data.Producto
 import com.example.tienda_virtual.R
+import com.example.tienda_virtual.Screen.CompradoScreen
 
 @Composable
 fun Navegacion(productos: List<Producto>) {
@@ -52,9 +53,20 @@ fun Navegacion(productos: List<Producto>) {
                         popUpTo(Rutas.Home.route) { inclusive = true }
                     }
                 },
-                onHistoriaClick = {}
+                onHistoriaClick = {
+                    navController.navigate(Rutas.Comprado.route)
+                }
             )
            }
+        }
+        composable(Rutas.Comprado.route) {
+            CompradoScreen(
+                onVolverClick = {
+                    navController.navigate(Rutas.Home.route) {
+                        popUpTo(Rutas.Home.route) { inclusive = true }
+                    }
+                }
+            )
         }
     }
 }
